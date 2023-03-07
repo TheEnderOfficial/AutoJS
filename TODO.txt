@@ -1,0 +1,3 @@
+- Add support for manipulating with mouse/keyboard
+- Add support for checking key state (like GetKeyState("Enter"))
+- Add automaticlly downloading npm modules

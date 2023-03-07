@@ -1,11 +1,6 @@
-const http = await imp("http");
+// Get mouse position.
+var mouse = robot.getMousePos();
 
-if (http) {
-    http.createServer(function (req, res) {
-        res.write('Hello World!'); //write a response to the client
-        res.end(); //end the response
-      }).listen(8080);
-}
-else {
-    print("You blocked importing http")
-}
+// Get pixel color in hex format.
+var hex = robot.getPixelColor(mouse.x, mouse.y);
+print("#" + hex + " at x:" + mouse.x + " y:" + mouse.y);
